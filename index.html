@@ -21,14 +21,18 @@
 				<img src="lib/img/arrow.png" alt="" width="auto" height="80%"/>
 			</div>
 			<div class="header-element left">
-				<h1>quand</h1>
-				<p>du 7 au 9 août, 2015<br/>cérémonie samedi le 8 à 15h30</p>
-				<h1>où</h1>
-				<p>4801 chemin St-Cyr<br/>Labelle, Tremblant</p>
+				<div class="header-element-box">
+					<h1>quand</h1>
+					<p>du 7 au 9 août, 2015<br/>cérémonie samedi le 8 à 15h30</p>
+				</div>
+				<div class="header-element-box">
+					<h1>où</h1>
+					<p>4801 chemin St-Cyr<br/>Labelle, Tremblant</p>
+				</div>
 			</div>
 			<div class="header-element vertical-flex">
-				<div class="header-btn"><h2>rsvp</h2></div>
-				<div class="header-btn"><h2>horaire</h2></div>
+				<div id="rsvp-scroll" class="header-btn"><h2>rsvp</h2></div>
+				<div id="schedule-scroll" class="header-btn"><h2>horaire</h2></div>
 			</div>
 			<div class="header-element right">
 				<h1>location de chalets</h1>
@@ -215,7 +219,7 @@
 			</div>
 			<hr class="activity-output"/>
 			<div class="form-row narrow toggle activity-output">
-				<h3 class="canoe-txt"><span id="canoe-output" class="output show-canoe"></span> &times; canoe</h3>
+				<h3 class="canoe-txt"><span id="canoe-output" class="output show-canoe"></span> &times; canot</h3>
 				<h3 class="yoga-txt"><span id="yoga-output" class="output show-yoga"></span> &times; yoga</h3>
 			</div>
 			<div class="form-row">
@@ -225,11 +229,38 @@
 	</div>
 <!-- info -->
 	<div class="panel info">
-		<div class="split-50 sherpa">
-			<img src="lib/img/horaire.png" alt="" class="schedule" width="auto" height="100%"/>
+		<div class="split-60 sherpa">
+			<img id="schedule" src="lib/img/horaire.png" alt="" width="auto" height="100%"/>
 		</div>
-		<div class="split-50 bianca">
-
+		<div class="split-40 bianca">
+			<div class="info-container top">
+				<div class="dresscode">
+					<h1>code vestimentaire</h1>
+					<h3>Rustique Chic</h3>
+					<h5>Les festivités prendront place<br/>à la campagne.</h5>
+					<h5 class="right">Les robes de bal et tuxedos<br/>sont moins recommandés.</h5>
+				</div>
+				<div class="bouquet">
+					<img src="lib/img/bouquet.png" alt="" width="auto" height="85%"/>
+				</div>
+			</div>
+			<div class="info-container bottom">
+				<h2>D'autres questions?</h2>
+				<div class="form-row narrow">
+					<div class="input-container">
+						<input id="name-contact" type="text" class="contact" value=""/>
+						<span>nom</span>
+					</div>
+					<div class="input-container">
+						<input id="email-contact" type="email" class="contact" value=""/>
+						<span>courriel</span>
+					</div>
+				</div>
+				<textarea id="message"></textarea>
+				<div class="form-row">
+					<div id="contact-btn" class="btn"><h2>envoyer</h2></div>
+				</div>
+			</div>
 		</div>
 		<div class="footer sundown">
 

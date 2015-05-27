@@ -144,9 +144,23 @@
 		overflow: hidden;
 	}
 
-	.split-50 {
-		width: 50%;
-		height: 85%;
+	.split-60 {
+		width: 60%;
+		height: 90%;
+		float: left;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+	.split-40 {
+		width: 40%;
+		height: 90%;
 		float: left;
 	}
 
@@ -242,17 +256,26 @@
 		align-items: center;
 	}
 
+	.header-element-box {
+		width: 50%;
+		padding: 0 15px;
+		box-sizing: border-box;
+	}
+
 	.header-element.left h1 {
 		color: #00515a;
+		text-align: center;
 	}
 
 	.header-element.left p {
 		margin: 15px 0;
 		color: #5c3820;
+		text-align: center;
 	}
 
 	.header-element.vertical-flex {
 		width: 10%;
+		padding: 20px 0;
 	}
 
 	.header-btn {
@@ -631,15 +654,102 @@
 	}
 
 /* info */
-	.scehdule {
-		margin: 0 auto;
+	.info-container.top {
+		width: 100%;
+		height: 40%;
+	}
+
+	.info-container.bottom {
+		width: 100%;
+		height: 60%;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+	.dresscode {
+		width: 70%;
+		height: 100%;
+		float: left;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+	.dresscode h1 {
+		color: #5c3820;
+		text-align: right;
+		display: block;
+		width: 70%;
+		text-transform: uppercase;
+	}
+
+	.dresscode h3 {
+		color: #860e23;
+		font-size: 1.35em;
+		display: block;
+		width: 80%;
+		text-align: center;
+	}
+
+	.dresscode h5 {
+		color: #00515a;
+		font-size: 1.15em;
+		display: block;
+		width: 75%;
+	}
+
+	.dresscode h5.right {
+		text-align: right;
+		width: 85%;
+	}
+
+	.bouquet {
+		width: 30%;
+		height: 100%;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		-webkit-align-items: center;
+		align-items: center;
 	}
 
 	.footer {
 		clear: both;
 		width: 100%;
-		height: 15%;
+		height: 10%;
 		position: relative;
+	}
+
+	textarea {
+		width: 65%;
+		height: 40%;
+		border: 1px solid #5c3820;
+		border-radius: 6px;
+		padding: 5px;
+		font-family: lato;
+		font-size: 1.2em;
+		background: ##fcfafb;
+		outline: none;
+		box-sizing: border-box;
+	}
+
+	input.contact {
+		width: 95%;
+		font-size: 1.1em;
 	}
 
 /* alert */
