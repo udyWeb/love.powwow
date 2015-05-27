@@ -661,6 +661,10 @@
 		position: absolute;
 	}
 
+	.info-container > h1 {
+		color: #5c3820;
+	}
+
 	.info-container.top {
 		height: 35%;
 		top: 5%;
