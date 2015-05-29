@@ -89,14 +89,10 @@
 	}
 
 	hr {
-		height: 0;
+		height: 1px;
 		width: 65%;
 		background: #5c3820;
 		border: 0;
-	}
-
-	hr.show {
-		height: 1px;
 	}
 	
 /* colors */
@@ -113,7 +109,7 @@
 	}
 
 	.monarch {
-		background: #fcfdff;
+		background: #860e23;
 	}
 
 	.racing-green {
@@ -142,28 +138,6 @@
 		position: relative;
 		box-sizing: border-box;
 		overflow: hidden;
-	}
-
-	.split-60 {
-		width: 60%;
-		height: 90%;
-		position: relative;
-		float: left;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-direction: column;
-		flex-direction: column;
-		-webkit-justify-content: space-around;
-		justify-content: space-around;
-		-webkit-align-items: center;
-		align-items: center;
-	}
-
-	.split-40 {
-		width: 40%;
-		height: 90%;
-		position: relative;
-		float: left;
 	}
 
 	.vertical-flex {
@@ -209,10 +183,18 @@
 		height: 65%;
 		position: relative;
 		overflow: hidden;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-align-items: center;
+		align-items: center;
 	}
 
 	.header-img {
+		width: 100%;
 		min-width: 1200px;
+		height: auto;
 		min-height: 100%;
 		position: absolute;
 		top: 0;
@@ -220,9 +202,8 @@
 	}
 
 	.logo {
-		position: absolute;
-		left: 35%;
-		top: 5%;
+		position: relative;
+		max-width: 400px;
 	}
 
 	.header-sub {
@@ -247,7 +228,7 @@
 	}
 
 	.header-element.left {
-		width: 40%;
+		width: 38.75%;
 		display: -webkit-flex;
 		display: flex;
 		-webkit-flex-direction: row;
@@ -259,9 +240,13 @@
 	}
 
 	.header-element-box {
-		width: 50%;
-		padding: 0 15px;
+		width: 47.5%;
+		padding: 0 5px;
 		box-sizing: border-box;
+	}
+
+	.header-element-box.left {
+		width: 52.5%;
 	}
 
 	.header-element.left h1 {
@@ -275,15 +260,23 @@
 		text-align: center;
 	}
 
-	.header-element.vertical-flex {
-		width: 10%;
+	.header-element.btn-group {
+		width: 12.5%;
 		padding: 20px 0;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		-webkit-align-items: center;
+		align-items: center;
 	}
 
 	.header-btn {
 		-webkit-transition: all 300ms ease-in-out;
 		transition: all 300ms ease-in-out;
-		width: 80%;
+		width: 92.5%;
 		height: 45px;
 		color: #00515a;
 		border: 1px solid #5c3820;
@@ -309,7 +302,7 @@
 
 	.header-element.right {
 		padding: 40px 0;
-		width: 40%;
+		width: 38.75%;
 		display: -webkit-flex;
 		display: flex;
 		-webkit-flex-direction: column;
@@ -326,21 +319,37 @@
 
 	.reservations {
 		width: 100%;
-		height: 40px;
+		height: 100px;
 		color: #00515a;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		-webkit-align-items: center;
+		align-items: center;
 	}
 
 	.reservations div {
 		width: 50%;
-		height: 100%;
-		padding: 5px 15px;
 		box-sizing: border-box;
 		float: left;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		-webkit-align-items: center;
+		align-items: center;
 	}
 
 	.reservations div:first-child {
 		border-right: 1px solid #5c3820;
+		padding-right: 10px;
+		margin-right: 10px;
 		text-align: right;
+		-webkit-align-items: flex-end;
+		align-items: flex-end;
 	}
 
 /* rsvp */
@@ -352,9 +361,10 @@
 	.progress {
 		width: 80px;
 		height: 40%;
-		position: absolute;
-		top: 25%;
-		right: 80px;
+		position: relative;
+		margin-top: 25vh;
+		margin-right: 5%;
+		float: right;
 		color: #00515a;
 		display: -webkit-flex;
 		display: flex;
@@ -395,9 +405,11 @@
 	.form-container {
 		-webkit-transition: all 300ms ease-in-out;
 		transition: all 300ms ease-in-out;
-		width: 50%;
-		position: absolute;
-		right: 160px;
+		width: 80%;
+		max-width: 650px;
+		position: relative;
+		float: right;
+		box-sizing: border-box;
 		display: -webkit-flex;
 		display: flex;
 		-webkit-flex-direction: column;
@@ -410,7 +422,7 @@
 
 	.form-container.top {
 		height: 35%;
-		top: 5%;
+		margin-top: 5vh;
 	}
 
 	.form-container.top.hide {
@@ -420,8 +432,15 @@
 	}
 
 	.form-container.bottom {
+		height: 0;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.form-container.bottom.in {
 		height: 60%;
-		top: 40%;
+		opacity: 1;
+		pointer-events: auto;
 	}
 
 	.form-container.full {
@@ -431,15 +450,15 @@
 	}
 
 	.form-container.review.in {
-		height: 95%;
-		top: 2.5%;
+		height: 90%;
+		margin-top: 2.5vh;
 		opacity: 1;
 		pointer-events: auto;
 	}
 
 	.form-container.confirm.in {
 		height: 60%;
-		top: 15%;
+		margin-top: 15vh;
 		opacity: 1;
 		pointer-events: auto;
 	}
@@ -477,14 +496,22 @@
 		color: #860e23;
 	}
 
+	.btn.mobile {
+		height: 0;
+		opacity: 0;
+		pointer-events: none;
+	}
+
 	.form-row {
 		-webkit-transition: all 300ms ease-out;
 		transition: all 300ms ease-out;
 		width: 100%;
 		height: 80px;
+		opacity: 1;
 		box-sizing: border-box;
 		display: -webkit-flex;
 		display: flex;
+		overflow: hidden;
 		-webkit-flex-direction: row;
 		flex-direction: row;
 		-webkit-justify-content: space-around;
@@ -497,28 +524,10 @@
 		padding: 0 20%;
 	}
 
-	.form-row.add-row {
-		height: 0;
-		opacity: 0;
-		pointer-events: none;
-	}
-
-	.form-row.add-row.show {
-		height: 80px;
-		opacity: 1;
-		pointer-events: auto;
-	}
-
 	.form-row.toggle {
 		height: 0;
 		opacity: 0;
 		pointer-events: none;
-	}
-
-	.form-row.toggle.show {
-		height: 80px;
-		opacity: 1;
-		pointer-events: auto;
 	}
 
 	.input-container {
@@ -530,7 +539,7 @@
 	input[type=email], input[type=text] {
 		-webkit-transition: all 300ms ease-in-out;
 		transition: all 300ms ease-in-out;
-		width: 100%;
+		width: 95%;
 		font-family: lato;
 		font-size: 1.25em;
 		outline: none;
@@ -579,7 +588,7 @@
 	.checkbox {
 		-webkit-transition: all 300ms ease-in-out;
 		transition: all 300ms ease-in-out;
-		width: 140px;
+		width: 125px;
 		color: #860e23;
 		border: 2px solid #00515a;
 		border-radius: 2px;
@@ -611,8 +620,8 @@
 
 	.checkbox.arrival, .checkbox.time {
 		font-size: 1.1em;
-		width: 220px;
-		max-width: 49%;
+		width: 95%;
+		max-width: 200px;
 	}
 
 	.clicker {
@@ -648,6 +657,12 @@
 
 	h4.activity-clickers.toggle, h4.dish-clickers.toggle {
 		display: block;
+		height: 0;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	hr.toggle {
 		height: 0;
 		opacity: 0;
 		pointer-events: none;
@@ -689,6 +704,38 @@
 	}
 
 /* info */
+	.split-60 {
+		width: 60%;
+		height: 90%;
+		position: relative;
+		float: left;
+		box-sizing: border-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+	.split-40 {
+		width: 40%;
+		height: 90%;
+		position: relative;
+		float: left;
+		box-sizing: border-box;
+	}
+
+	.split-60 img {
+		margin-right: -25px;
+	}
+
+	.schedule-mobile {
+		display: none;
+	}
+
 	.info-container {
 		width: 100%;
 		position: absolute;
@@ -776,6 +823,18 @@
 		width: 100%;
 		height: 10%;
 		position: relative;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+	.footer h5 {
+		color: #14170f;
+		text-align: center;
+		font-size: 1.2em;
 	}
 
 	textarea {
@@ -792,7 +851,6 @@
 	}
 
 	input.contact {
-		width: 95%;
 		font-size: 1.1em;
 	}
 
@@ -860,9 +918,9 @@
 
 /* breakpoints */
 	@media only screen and (max-width: 1200px) {
-		.header-img, {
-			left: 50%;
-			margin-left: -600px;
+		.header-img {
+			left: 60%;
+			margin-left: -720px;
 		}
 
 		.bg-img-fill {
@@ -871,9 +929,249 @@
 		}
 	}
 
-	@media only screen and (max-width: 700px) {
+	@media only screen and (max-width: 1070px) {
+		.split-60 {
+			padding: 40px 0;
+		}
+	}
+
+	@media only screen and (max-width: 910px) {
 		.overlay {
-			background: rgba(255,255,255,.65);
+			background: rgba(255,255,255,.7);
+		}
+
+		.progress {
+			margin-right: 0;
+		}
+
+		.panel.info {
+			height: 175%;
+		}
+
+		.split-60 {
+			width: 100%;
+			height: 45%;
+			float: none;
+			padding: 0;
+		}
+
+		.split-40 {
+			width: 100%;
+			height: 50%;
+			float: none;
+		}
+
+		.dresscode h5:first-of-type {
+			margin-left: 70%;
+		}
+
+		.footer {
+			height: 5%;
+		}
+	}
+
+	@media only screen and (max-width: 700px) {
+		.form-row.narrow {
+			padding: 0;
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		.panel.header {
+			height: 200%;
+		}
+
+		.header-img-container {
+			height: 50%;
+		}
+
+		.header-img {
+			width: auto;
+			min-width: none;
+		}
+
+		.logo {
+			margin-top: -125px;
+		}
+
+		.arrow {
+			display: none;
+		}
+
+		.header-sub {
+			height: 50%;
+		}
+
+		.header-element {
+			float: none;
+		}
+
+		.header-element.left {
+			width: 100%;
+			height: 60%;
+			padding: 30px 15px 0;
+			-webkit-flex-direction: column;
+			flex-direction: column;
+		}
+
+		.header-element.btn-group {
+			width: 100%;
+			height: 20%;
+			position: absolute;
+			top: 30%;
+			left: 0;
+		}
+
+		.header-btn {
+			width: 45%;
+			background: #f2f3e1;
+		}
+
+		.header-element.right {
+			padding: 60px 15px;
+			width: 100%;
+			height: 40%;
+		}
+
+		.reservations div {
+			width: 60%;
+		}
+
+		.reservations div:first-child {
+			width: 40%;
+		}
+
+		.panel.info {
+			height: 340%;
+		}
+
+		.split-60 {
+			width: 100%;
+			height: 190vh;
+			float: none;
+			padding: none;
+		}
+
+		.split-40 {
+			width: 100%;
+			height: 140vh;
+			float: none;
+		}
+
+		.schedule-desktop {
+			display: none;
+		}
+
+		.schedule-mobile {
+			display: block;
+		}
+
+		.dresscode h1 {
+			text-align: left;
+		}
+
+		.dresscode h5:first-of-type {
+			margin-left: 5%;
+		}
+
+		.footer {
+			height: 10vh;
+		}
+	}
+
+	@media only screen and (max-width: 505px) {
+		.progress {
+			width: 100%;
+			height: 50px;
+			position: relative;
+			margin: 0;
+			float: none;
+			-webkit-flex-direction: row;
+			flex-direction: row;
+		}
+
+		.form-container {
+			width: 100%;
+			padding: 0 2.5%;
+			margin: 0;
+			position: absolute;
+			top: 50px;
+			left: 0;
+			float: none;
+		}
+	
+		.form-container.top {
+			height: 80%;
+			margin: 0;
+		}
+
+		.form-container.bottom.in {
+			height: 90%;
+			margin: 0;
+		}
+
+		.form-container.review.in {
+			height: 88%;
+			margin: 0;
+		}
+
+		.btn.mobile {
+			height: auto;
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		.form-row.mobile-vertical {
+			height: 140px;
+			-webkit-flex-direction: column;
+			flex-direction: column;
+		}
+
+		.form-row.mobile-vertical-triple {
+			height: 200px;
+			-webkit-flex-direction: column;
+			flex-direction: column;
+		}
+
+		.form-row.mobile-vertical-full {
+			height: 85%;
+			-webkit-flex-direction: column;
+			flex-direction: column;
+		}
+
+		.form-row.date.mobile-vertical {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.form-row.date.mobile-vertical-triple {
+			position: absolute;
+			top: 140px;
+			left: 0;
+		}
+
+		.input-container {
+			max-width: 75%;
+		}
+
+		.mobile-group {
+			-webkit-transition: all 300ms ease-in-out;
+			transition: all 300ms ease-in-out;
+			height: 85%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+		}
+
+		.mobile-group.toggle {
+			-webkit-transition: all 300ms ease-in-out;
+			transition: all 300ms ease-in-out;
+			height: 0;
+			opacity: 0;
+			pointer-events: none;
 		}
 	}
 

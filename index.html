@@ -6,6 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="HandheldFriendly" content="true">
 	<link rel="stylesheet" href="lib/css/lpw.css">
+	<link rel="icon" href="favicon.png">
+	<!--[if lte IE 9]>
+		<script>
+			window.location.replace('http://goo.gl/forms/DKO7QmquxT');
+		</script>
+	<![endif]-->
 	<script src="lib/js/jquery-2.1.1.min.js"></script>
 	<script src="lib/js/lpw.js"></script>
 </head>
@@ -14,33 +20,32 @@
 	<div class="panel bianca header">
 		<div class="header-img-container">
 			<img src="lib/img/resort.blur.jpg" alt="" class="header-img" width="100%" height="auto"/>
+			<img src="lib/img/logo.png" alt="Logo mariage Pier-Luc et Noah" class="logo" width="80%" height="auto"/>
 		</div>
-		<img src="lib/img/logo.png" alt="Logo mariage Pier-Luc et Noah" class="logo" width="30%" height="auto"/>
 		<div class="header-sub">
 			<div class="header-element arrow">
 				<img src="lib/img/arrow.png" alt="" width="auto" height="80%"/>
 			</div>
 			<div class="header-element left">
-				<div class="header-element-box">
+				<div class="header-element-box left">
 					<h1>quand</h1>
-					<p>du 7 au 9 août, 2015<br/>cérémonie samedi le 8 à 15h30</p>
+					<p>7 au 9 août, 2015<br/>cérémonie le samedi<br/>8 août à 15h30</p>
 				</div>
 				<div class="header-element-box">
 					<h1>où</h1>
-					<p>4801 chemin St-Cyr<br/>Labelle, Tremblant</p>
+					<p>4801<br/>ch St-Cyr<br/>Labelle, Tremblant</p>
 				</div>
 			</div>
-			<div class="header-element vertical-flex">
+			<div class="header-element btn-group">
 				<div id="rsvp-scroll" class="header-btn"><h2>rsvp</h2></div>
 				<div id="schedule-scroll" class="header-btn"><h2>horaire</h2></div>
 			</div>
 			<div class="header-element right">
 				<h1>location de chalets</h1>
 				<div class="reservations">
-					<div><p>8 à 10 personnes par chalet</p></div>
-					<div><p>Réserver sous : mariage Pier-Luc et Noah</p></div>
+					<div><p>8 à 10 personnes<br/>par chalet</p></div>
+					<div><p>Réserver sous:<br/>mariage Pier-Luc et Noah</p></div>
 				</div>
-				<a href="#">Hébergement Alternatif</a>
 			</div>
 			<div class="header-element arrow">
 				<img src="lib/img/arrow.png" alt="" width="auto" height="80%"/>
@@ -58,24 +63,24 @@
 		</div>
 		<div id="form-top" class="form-container top">
 			<h1>RSVP</h1>
-			<h5>Veuillez compléter le formulaire suivant afin de confirmer votre présence.</h5>
-			<p>Il y a <strong>3 étapes</strong>. Vous pourrez suivre votre progrès à l'aide des bulles d'indication à droite.</p>
+			<h5>Veuillez compléter le formulaire suivant<br/>afin de confirmer votre présence avant le 20 juin.</h5>
+			<p>Il y a <strong>3 étapes</strong>. Vous pourrez suivre votre progrès<br/>à l'aide des bulles d'indication à droite.</p>
+			<div id="mobile-start-btn" class="btn mobile"><h2>commencer</h2></div>
 		</div>
-		<div class="form-container bottom step in">
-			<div class="form-row">
+		<div id="first-step" class="form-container bottom step in">
+			<div class="form-row mobile-vertical">
 				<div class="input-container">
 					<input id="name" type="text" class="input-check" value="" data-alert-txt="Vous avez oublié d'indiquer votre nom!"/>
 					<span>nom</span>
 				</div>
 				<div class="input-container">
-					<input id="email" type="email" value=""/>
-					<span>courriel</span>
+					<input id="email" type="text" class="input-check" value="" data-alert-txt="Vous avez oublié d'indiquer votre courriel ou téléphone"/>
+					<span>courriel ou téléphone</span>
 				</div>
 			</div>
-			<h5>Veuillez indiquer si vous venez avec des invités</h5>
+			<h5>Serez vous accompagné?</h5>
 			<p>Vos enfants sont également les bienvenus.</p>
-			<div class="form-row narrow">
-				<h4>Je serai</h4>
+			<div class="form-row narrow mobile-vertical-triple">
 				<div class="checkbox guest" data-input="guest" data-input-value="1" data-radio="true"><span>Accompagné</span></div>
 				<div class="checkbox guest" data-input="guest" data-input-value="0" data-radio="true"><span>Seul</span></div>
 			</div>
@@ -85,31 +90,31 @@
 		</div>
 		<div id="guest-inputs" class="form-container bottom guest-inputs">
 			<h4>Entrez les noms de vos invités.</h4>
-			<div class="form-row add-row show">
-				<div class="input-container">
-					<input type="text" class="add-guest"/>
-					<span>nom</span>
-				</div>
-			</div>
 			<div class="form-row add-row">
 				<div class="input-container">
 					<input type="text" class="add-guest"/>
 					<span>nom</span>
 				</div>
 			</div>
-			<div class="form-row add-row">
+			<div class="form-row toggle add-row">
 				<div class="input-container">
 					<input type="text" class="add-guest"/>
 					<span>nom</span>
 				</div>
 			</div>
-			<div class="form-row add-row">
+			<div class="form-row toggle add-row">
 				<div class="input-container">
 					<input type="text" class="add-guest"/>
 					<span>nom</span>
 				</div>
 			</div>
-			<div class="form-row add-row">
+			<div class="form-row toggle add-row">
+				<div class="input-container">
+					<input type="text" class="add-guest"/>
+					<span>nom</span>
+				</div>
+			</div>
+			<div class="form-row toggle add-row">
 				<div class="input-container">
 					<input type="text" class="add-guest"/>
 					<span>nom</span>
@@ -120,104 +125,99 @@
 			</div>
 		</div>
 		<div class="form-container bottom step">
-			<div class="form-row toggle date">
+			<div class="form-row mobile-vertical date">
 				<h4>Sélectionnez votre date d'arrivée.</h4>
 				<a id="view-calendar" href="#">horaire</a>
 			</div>
-			<div class="form-row toggle date">
+			<div class="form-row toggle date mobile-vertical-triple">
 				<div id="friday" class="checkbox arrival" data-input="arrival" data-input-value="7" data-radio="true"><span>Vendredi - 7 août</span></div>
 				<div id="saturday" class="checkbox arrival" data-input="arrival" data-input-value="8" data-radio="true"><span>Samedi - 8 août</span></div>
 				<div class="checkbox arrival next-btn" data-input="arrival" data-input-value="9" data-radio="true"><span>Dimanche - 9 août</span></div>
 			</div>
 			<div class="form-row toggle friday saturday">
-				<h4 class="">Sélectionnez les activités auxquelles vous assisterez.</h4>
+				<h4 class="">Sélectionnez les activités<span class="mobile-hide"> auxquelles vous assisterez.</span></h4>
 			</div>
-			<div class="form-row toggle friday">
+			<div class="form-row toggle friday mobile-vertical-triple">
 				<div class="checkbox time" data-input="canoe" data-input-value="1"><span>Ven 12h - Canot</span></div>
-				<div class="checkbox time" data-input="wine" data-input-value="1"><span>Ven 16h - Dégustation de vin</span></div>
+				<div class="checkbox time" data-input="wine" data-input-value="1"><span>Ven 16h - Dégust. de vin</span></div>
 				<div class="checkbox time" data-input="bbq" data-input-value="1"><span>Ven 19h - BBQ</span></div>
 			</div>
-			<hr class="friday saturday"/>
-			<div class="form-row toggle friday saturday">
+			<hr class="mobile-hide friday toggle"/>
+			<div class="form-row toggle friday saturday mobile-vertical-triple">
 				<div class="checkbox time" data-input="yoga" data-input-value="1"><span>Sam 10h - Yoga</span></div>
 				<div class="checkbox time" data-input="ceremony" data-input-value="1"><span>Sam 15h30 - Cérémonie</span></div>
 				<div class="checkbox time" data-input="dinner" data-input-value="1"><span>Sam 18h - Souper</span></div>
 			</div>
-			<hr class="friday saturday"/>
+			<hr class="mobile-hide friday saturday toggle"/>
 			<div class="form-row toggle friday saturday">
 				<div class="checkbox time" data-input="brunch" data-input-value="1"><span>Dim 11h - Brunch</span></div>
 			</div>
-			<div class="form-row">
-				<div class="btn next-btn"><h2>continuer</h2></div>
+			<div class="form-row toggle friday saturday">
+				<div id="to-clickers" class="btn next-btn"><h2>continuer</h2></div>
 			</div>
 		</div>
 		<div class="form-container bottom step">
-			<h4 class="activity-clickers">Indiquez le nombre de personnes qui assisteront</h4>
-			<div class="form-row activity-clickers">
-				<h5 class="canoe-clicker">au canot</h5>
-				<div class="clicker canoe-clicker" data-var="canoe">
-					<h1 class="minus">-</h1>
-					<span>1</span>
-					<h1 class="plus">+</h1>
+			<div id="mobile-activities" class="mobile-group toggle">
+				<h4 class="activity-clickers">Indiquez le nombre de participants</h4>
+				<div class="form-row activity-clickers mobile-vertical-full">
+					<h5 class="canoe-clicker">au canot</h5>
+					<div class="clicker canoe-clicker" data-var="canoe">
+						<h1 class="minus">-</h1>
+						<span>1</span>
+						<h1 class="plus">+</h1>
+					</div>
+					<h5 class="yoga-clicker">au yoga</h5>
+					<div class="clicker yoga-clicker" data-var="yoga">
+						<h1 class="minus">-</h1>
+						<span>1</span>
+						<h1 class="plus">+</h1>
+					</div>
+					<div id="mobile-cont-btn" class="btn mobile"><h2>continuer</h2></div>
 				</div>
-				<h5 class="yoga-clicker">au yoga</h5>
-				<div class="clicker yoga-clicker" data-var="yoga">
-					<h1 class="minus">-</h1>
-					<span>1</span>
-					<h1 class="plus">+</h1>
-				</div>
+				<hr class="show"/>
 			</div>
-			<hr class="show"/>
-			<h4 class="dish-clickers">Indiquez le nombre de chaque plat que vous aurez besoin.</h4>
-			<div class="form-row dish-clickers">
-				<h5>Boeuf</h5>
-				<div class="clicker" data-var="beef">
-					<h1 class="minus">-</h1>
-					<span>0</span>
-					<h1 class="plus">+</h1>
+			<div id="mobile-dinners" class="mobile-group toggle">
+				<h4 class="dish-clickers">Indiquez la quantité de chaque plat dont vous aurez besoin.</h4>
+				<div class="form-row dish-clickers mobile-vertical-triple">
+					<h5>Boeuf</h5>
+					<div class="clicker" data-var="beef">
+						<h1 class="minus">-</h1>
+						<span>0</span>
+						<h1 class="plus">+</h1>
+					</div>
+					<h5>Poisson</h5>
+					<div class="clicker" data-var="fish">
+						<h1 class="minus">-</h1>
+						<span>0</span>
+						<h1 class="plus">+</h1>
+					</div>
 				</div>
-				<h5>Poisson</h5>
-				<div class="clicker" data-var="fish">
-					<h1 class="minus">-</h1>
-					<span>0</span>
-					<h1 class="plus">+</h1>
+				<div class="form-row">
+					<div class="input-container">
+						<input id="allergies" type="text"/>
+						<span>allergies</span>
+					</div>
 				</div>
-			</div>
-			<div class="form-row">
-				<div class="input-container">
-					<input id="allergies" type="text"/>
-					<span>allergies</span>
+				<div class="form-row">
+					<div id="done" class="btn"><h2>continuer</h2></div>
 				</div>
-			</div>
-			<div class="form-row">
-				<div id="done" class="btn"><h2>continuer</h2></div>
 			</div>
 		</div>
 		<div id="review" class="form-container full review">
 			<h1>Votre&nbsp;&nbsp;RSVP</h1>
-			<h5>Veuillez vérifier vos informations.<br/>Lorsque vous serez prêt, cliquez sur envoyer.</h5>
-			<hr class="show"/>
-			<div class="form-row">
-				<h3>Nom:&nbsp;&nbsp;<span id="name-output" class="output"></span></h3>
-				<h3 class="email-output">Courriel:&nbsp;&nbsp;<span id="email-output" class="output"></span></h3>
+			<h5 class="mobile-hide">Veuillez vérifier vos informations.<br/>Lorsque vous serez prêt, cliquez sur envoyer.</h5>
+			<hr/>
+			<div class="form-row mobile-vertical-triple">
+				<h3><span id="name-output" class="output"></span><br/><span id="email-output" class="output"></span><br/><span class="guest-output">Accompagné par<br/><span id="guests-output" class="output"></span></h3>
 			</div>
-			<hr class="guest-output"/>
-			<div class="form-row toggle guest-output">
-				<h3>Mes <span id="persons-output"></span> invités sont:<br/><span id="guests-output" class="output"></span></h3>
+			<hr/>
+			<div class="form-row mobile-vertical">
+				<h3><span id="guest-txt-arrival">Nous arriverons</span> le <span id="arrival-output" class="output"></span> août</h3>
 			</div>
-			<hr class="show"/>
-			<div class="form-row">
-				<h3><span id="guest-txt-arrival">Nous arriverons</span> le <span id="arrival-output" class="output"></span> août.</h3>
-			</div>
-			<div class="form-row">
-				<h3><span id="guest-txt-activity">Nous serons présents</span>:<br/><span id="activities-output" class="output"></span></h3>
-			</div>
-			<hr class="dinner-output"/>
 			<div class="form-row narrow toggle dinner-output">
 				<h3><span id="beef-output" class="output"></span> &times; boeuf</h3>
 				<h3><span id="fish-output" class="output"></span> &times; poisson</h3>
 			</div>
-			<hr class="activity-output"/>
 			<div class="form-row narrow toggle activity-output">
 				<h3 class="canoe-txt"><span id="canoe-output" class="output show-canoe"></span> &times; canot</h3>
 				<h3 class="yoga-txt"><span id="yoga-output" class="output show-yoga"></span> &times; yoga</h3>
@@ -230,20 +230,21 @@
 			<svg class="merci" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 150">
 				<path class="merci-path a" d="m21.639 48.2c9.25-7.75 24.647-13.314 37-31 21.629-30.967-22.39 73.3-39.09 109-2.262 4.836-13.271 16.07-11.666 10.977 11.666-37 21.19-67.796 42.872-88.977 18.813-18.381 34.2-10.793 34.2 25.383 0 28.592-17.521 68.2-12.177 55.78 12.99-30.2 28.28-89.43 64.851-85.08 29.22 3.474-29.01 76.35-13.437 86.988 24.282 11.324 98.28-57.07 68.07-60.898-22.31-2.826-64.01 59.06-30.04 66.808 20.677 4.713 49.21-9.494 61.15-21 16.322-15.732 29.862-34.724 40-55 4.334-8.667-25.863 10.114-22 19 4.286 9.858 30.08-6.576 32 4 3.924 19.901-38.829 46.42-21 53 6.456 2.381 35.09-7.784 42-22 11.366-23.394 47.717-51.821 48-28.682.144 11.742 6.485-27.492-31.532 4.502-8.453 7.113-25.959 26.438-17.468 37.18 14.05 17.77 55.41-6.443 71-24 5.252-6.292 13.799-25.07 10-19-17.708 28.28-29.951 67.29 17.898 35.815" fill="none" stroke="#14170f" stroke-linecap="round" stroke-width="5.5" stroke-miterlimit="2"/><path class="merci-path b" d="m380.79 66.04c-7.964 18.636 20.272-13.42-3.061-5.102" fill="none" stroke="#14170f" stroke-linecap="round" stroke-width="5.5" stroke-miterlimit="2"/>
 			</svg>
-			<h1>Votre RSVP à été enregistré avec succès!</h1>
+			<h1>Votre RSVP à été enregistrée avec succès</h1>
 		</div>
 	</div>
 <!-- info -->
 	<div class="panel info">
-		<div class="split-60 sherpa">
-			<img id="schedule" src="lib/img/horaire.png" alt="" width="auto" height="100%"/>
+		<div id="schedule" class="split-60 sherpa">
+			<img src="lib/img/schedule.png" alt="" class="schedule-desktop" width="auto" height="100%"/>
+			<img src="lib/img/schedule.mobile.png" alt="" class="schedule-mobile" width="auto" height="100%"/>
 		</div>
 		<div class="split-40 bianca">
 			<div class="info-container top">
 				<div class="dresscode">
 					<h1>code vestimentaire</h1>
 					<h3>Rustique Chic</h3>
-					<h5>Les festivités prendront place<br/>à la campagne.</h5>
+					<h5>Les festivités se dérouleront<br/>à la campagne.</h5>
 					<h5 class="right">Les robes de bal et tuxedos<br/>sont moins recommandés.</h5>
 				</div>
 				<div class="bouquet">
@@ -252,7 +253,7 @@
 			</div>
 			<div class="info-container bottom">
 				<h1>D'autres questions?</h1>
-				<div class="form-row narrow">
+				<div class="form-row narrow mobile-vertical">
 					<div class="input-container">
 						<input id="name-contact" type="text" class="contact" value=""/>
 						<span>nom</span>
@@ -269,7 +270,7 @@
 			</div>
 		</div>
 		<div class="footer sundown">
-
+			<h5>Information<br/>418-956-3484</h5>
 		</div>
 	</div>
 <!-- alert -->
