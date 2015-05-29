@@ -536,6 +536,10 @@
 		align-items: center;
 	}
 
+	.form-row.big {
+		height: 200px;
+	}
+
 	.form-row.narrow {
 		padding: 0 20%;
 	}
