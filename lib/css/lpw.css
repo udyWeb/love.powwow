@@ -990,6 +990,10 @@
 	}
 
 	@media only screen and (max-width: 600px) {
+		.panel {
+			height: 110%;
+		}
+
 		.panel.header {
 			height: 200%;
 		}
