@@ -215,6 +215,8 @@
 	}
 
 	.logo {
+		width: 80%;
+		height: auto;
 		position: relative;
 		max-width: 400px;
 	}
