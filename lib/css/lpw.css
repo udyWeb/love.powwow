@@ -512,9 +512,15 @@
 		color: #860e23;
 	}
 
+	.mobile-group {
+		width: 100%;
+	}
+
 	.btn.mobile {
 		height: 0;
+		width: 0;
 		opacity: 0;
+		overflow: hidden;
 		pointer-events: none;
 	}
 
