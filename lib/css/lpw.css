@@ -372,7 +372,7 @@
 	.panel.rsvp {
 		border: solid #5c3820;
 		border-width: 5px 0 0;
-		min-height: 550px;
+		min-height: 560px;
 	}
 
 	.progress {
@@ -944,6 +944,43 @@
 		color: #00515a;
 	}
 
+	.spinner {
+		width: 70px;
+		height: 0;
+		text-align: center;
+		overflow: hidden;
+	}
+
+	.spinner.in {
+		height: auto;
+		opacity: 1;
+	}
+	
+	.spinner > div {
+		width: 18px;
+		height: 18px;
+		background: #00515a;
+		border-radius: 100%;
+		display: inline-block;
+	}
+
+	.spinner.in > div {
+		-webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+		animation: bouncedelay 1.4s infinite ease-in-out;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+	}
+	
+	.spinner.in .bounce1 {
+		-webkit-animation-delay: -0.32s;
+		animation-delay: -0.32s;
+	}
+	
+	.spinner.in .bounce2 {
+		-webkit-animation-delay: -0.16s;
+		animation-delay: -0.16s;
+	}
+
 /* breakpoints */
 	@media only screen and (max-width: 1200px) {
 		.header-img-container {
@@ -1005,13 +1042,9 @@
 	}
 
 	@media only screen and (max-width: 600px) {
-		.panel {
-			height: 115%;
-		}
-
 		.panel.header {
 			height: 220%;
-			min-height: 1100px;
+			min-height: 1120px;
 		}
 
 		.header-img-container, .logo-container {
@@ -1024,7 +1057,7 @@
 		}
 
 		.logo {
-			margin-top: -125px;
+			margin-top: -200px;
 		}
 
 		.arrow {
@@ -1049,9 +1082,9 @@
 
 		.header-element.btn-group {
 			width: 100%;
-			height: 15%;
+			height: 17.5%;
 			position: absolute;
-			top: 30%;
+			top: 25%;
 			left: 0;
 		}
 
@@ -1076,7 +1109,7 @@
 
 		.panel.info {
 			height: 350%;
-			min-height: 1900px;
+			min-height: 1960px;
 		}
 
 		.split-60 {
@@ -1089,7 +1122,6 @@
 		.split-40 {
 			width: 100%;
 			height: 40%;
-			min-height: 440px;
 			float: none;
 		}
 
@@ -1133,7 +1165,6 @@
 			top: 50px;
 			left: 0;
 			float: none;
-			min-height: 500px;
 		}
 	
 		.form-container.top {
@@ -1147,7 +1178,7 @@
 		}
 
 		.form-container.review.in {
-			height: 85%;
+			height: 80%;
 			margin: 0;
 		}
 
@@ -1195,7 +1226,7 @@
 		.mobile-group {
 			-webkit-transition: all 300ms ease-in-out;
 			transition: all 300ms ease-in-out;
-			height: 90%;
+			height: 100%;
 			width: 100%;
 			position: absolute;
 			top: 0;
@@ -1209,6 +1240,22 @@
 			height: 0;
 			opacity: 0;
 			pointer-events: none;
+		}
+	}
+
+/* keyframes */	
+	@-webkit-keyframes bouncedelay {
+		0%, 80%, 100% { -webkit-transform: scale(0.0); }
+		40% { -webkit-transform: scale(1.0); }
+	}
+	
+	@keyframes bouncedelay {
+		0%, 80%, 100% { 
+			transform: scale(0.0);
+			-webkit-transform: scale(0.0);
+		} 40% { 
+			transform: scale(1.0);
+			-webkit-transform: scale(1.0);
 		}
 	}
 
