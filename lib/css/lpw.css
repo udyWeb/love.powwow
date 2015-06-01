@@ -25,23 +25,6 @@
 	input:-webkit-autofill {
 		-webkit-text-fill-color: #860e23 !important;
 	}
-	
-	a {
-		-webkit-transition: all 300ms ease-in-out;
-		transition: all 300ms ease-in-out;
-		font-size: 1.17em;
-		color: #860e23;
-		display: block;
-		padding: 0 5px;
-		text-decoration: none;
-		box-shadow: inset 0 -5px 0 #b7e7f9;
-		box-sizing: border-box;
-	}
-
-	a:hover {
-		color: #00515a;
-		box-shadow: inset 0 -1.175em 0 #b7e7f9;
-	}
 
 	h1 {
 		font-family: amatic;
@@ -86,6 +69,22 @@
 		font-size: 1.17em;
 		font-weight: 300;
 		margin: 0;
+	}
+
+	a {
+		-webkit-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out;
+		font-size: 1.17em;
+		color: #860e23;
+		padding: 0 5px;
+		text-decoration: none;
+		box-shadow: inset 0 -5px 0 rgba(183, 231, 249,.65);
+		box-sizing: border-box;
+	}
+
+	a:hover {
+		color: #00515a;
+		box-shadow: inset 0 -1.175em 0 rgba(183, 231, 249,.65);
 	}
 
 	hr {
@@ -247,8 +246,6 @@
 		width: 38.75%;
 		display: -webkit-flex;
 		display: flex;
-		-webkit-flex-direction: row;
-		flex-direction: row;
 		-webkit-justify-content: space-around;
 		justify-content: space-around;
 		-webkit-align-items: center;
@@ -256,24 +253,31 @@
 	}
 
 	.header-element-box {
-		width: 47.5%;
+		width: 45%;
+		height: 65%;
 		padding: 0 5px;
 		box-sizing: border-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		-webkit-align-items: center;
+		align-items: center;
 	}
 
 	.header-element-box.left {
-		width: 52.5%;
+		width: 55%;
 	}
 
 	.header-element.left h1 {
 		color: #00515a;
-		text-align: center;
 	}
 
 	.header-element.left p {
-		margin: 15px 0;
-		color: #5c3820;
 		text-align: center;
+		color: #5c3820;
 	}
 
 	.header-element.btn-group {
@@ -317,7 +321,7 @@
 	}
 
 	.header-element.right {
-		padding: 40px 0;
+		padding: 20px 0;
 		width: 38.75%;
 		display: -webkit-flex;
 		display: flex;
@@ -333,10 +337,12 @@
 		color: #5c3820;
 	}
 
+	.header-element.right p {
+		color: #00515a;
+	}
+
 	.reservations {
 		width: 100%;
-		height: 100px;
-		color: #00515a;
 		display: -webkit-flex;
 		display: flex;
 		-webkit-justify-content: space-around;
@@ -346,26 +352,24 @@
 	}
 
 	.reservations div {
-		width: 50%;
+		width: 49%;
 		box-sizing: border-box;
-		float: left;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-direction: column;
-		flex-direction: column;
-		-webkit-justify-content: space-around;
-		justify-content: space-around;
-		-webkit-align-items: center;
-		align-items: center;
 	}
 
-	.reservations div:first-child {
-		border-right: 1px solid #5c3820;
-		padding-right: 10px;
-		margin-right: 10px;
+	.reservations div:first-of-type {
 		text-align: right;
-		-webkit-align-items: flex-end;
-		align-items: flex-end;
+		margin-right: 20px;
+	}
+
+	.reservations div:nth-of-type(2) {
+		width: 1px;
+		height: 80px;
+		border: 1px solid #5c3820;
+	}
+
+	.reservations div:last-of-type {
+		text-align: left;
+		margin-left: 20px;
 	}
 
 /* rsvp */
@@ -420,8 +424,8 @@
 	}
 
 	.form-container {
-		-webkit-transition: all 300ms ease-in-out;
-		transition: all 300ms ease-in-out;
+		-webkit-transition: all 600ms ease-in-out;
+		transition: all 600ms ease-in-out;
 		width: 80%;
 		max-width: 650px;
 		min-height: none;
@@ -510,6 +514,10 @@
 		text-align: center;
 	}
 
+	.form-container p.link {
+		color: #860e23;
+	}
+
 	.form-container.review .output {
 		color: #860e23;
 	}
@@ -527,8 +535,8 @@
 	}
 
 	.form-row {
-		-webkit-transition: all 300ms ease-out;
-		transition: all 300ms ease-out;
+		-webkit-transition: all 600ms ease-out;
+		transition: all 600ms ease-out;
 		width: 100%;
 		height: 80px;
 		opacity: 1;
@@ -758,6 +766,17 @@
 
 	.split-60 img {
 		margin-right: -25px;
+	}
+
+	.split-60 a {
+		color: #f08e6a;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
+	.split-60 a:hover {
+		color: #00515a;
 	}
 
 	.schedule-mobile {
@@ -1041,7 +1060,11 @@
 		}
 	}
 
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 650px) {
+		.mobile-hide {
+			display: none;
+		}
+
 		.panel.header {
 			height: 220%;
 			min-height: 1120px;
@@ -1074,7 +1097,7 @@
 
 		.header-element.left {
 			width: 100%;
-			height: 60%;
+			height: 55%;
 			padding: 10px 15px 0;
 			-webkit-flex-direction: column;
 			flex-direction: column;
@@ -1094,17 +1117,27 @@
 		}
 
 		.header-element.right {
-			padding: 30px 15px 10px;
+			padding: 10px;
 			width: 100%;
-			height: 40%;
+			height: 45%;
 		}
 
-		.reservations div {
-			width: 60%;
+		.reservations {
+			-webkit-flex-direction: column;
+			flex-direction: column;
 		}
 
-		.reservations div:first-child {
-			width: 40%;
+		.reservations div:first-of-type {
+			text-align: center;
+			margin: 0 0 5px;
+			padding: 0 0 5px;
+			border: solid #5c3820;
+			border-width: 0 0 1px 0;
+		}
+
+		.reservations div:last-of-type {
+			text-align: center;
+			margin: 0;
 		}
 
 		.panel.info {
